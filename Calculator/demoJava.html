@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script type="text/javascript">
+    
+    const getValue =(firstNumber, secondNumber) =>{
+      
+       x = document.getElementById("firstNumber").value;
+        y = document.getElementById("secondNumber").value;
+       
+    }
+  
+   
+    const add = () => {
+        
+        getValue();
+      
+     let sum=Number(x)+Number(y);
+
+        document.getElementById("result").innerHTML =  +x+" + "+y+" = "+sum;
+    }
+  
+    const sub= ()=> {
+        
+        getValue();
+       
+       let subb=Number(x)-Number(y);
+        
+        document.getElementById("result").innerHTML = +x+" - "+y+" = "+subb;
+    }
+const clearScreen =() =>{
+  
+  document.getElementById("firstNumber").value="";
+  document.getElementById("secondNumber").value="";
+   document.getElementById("result").innerHTML = "";
+
+}
+</script>
+
+
+
+<br/>
+<h1>Calculator </h1>
+<form><label>Enter a first number : </label><input type="text" id="firstNumber"  required />
+</form>
+
+<form><label>Enter a second number : </label><input type="text" id="secondNumber" required />
+</form>
+
+
+
+<button onclick="add()">Add</button>
+
+<button onclick="sub()">Substract</button>
+
+<button onclick="clearScreen()">clear</button>
+
+<br/>
+
+<p id="result">Result</p>
+</body>
+</html>

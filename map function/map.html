@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      const list = [
+        {
+         name:"John Doe",
+         born:"1996",
+         gender:"male",
+         promotion:"3",
+         profession:"software"
+        },
+        {
+          name:"Taylor Bez",
+         born:"1983",
+         gender:"male",
+         promotion:"3",
+         profession:"marketing team"
+        },
+        {
+          name:"Brian Daylord",
+         born:"1995",
+         gender:"male",
+         promotion:"4",
+         profession:"software"
+        },
+      ];
+        const Treetext = list.map((person) =>({
+          profession: person.profession,
+          gender: person.gender,
+        }));
+         list.forEach((a) => {
+          a.promotion=--a.promotion;
+          console.log(a);
+        });
+      const birthdate = list.filter((person)=>person.born>1993);
+      console.log(Treetext);
+      console.log(birthdate);
+      
+   
+  </script>
+   
+  
+
+  
+
+
+
+</body>
+</html>

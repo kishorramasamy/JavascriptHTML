@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+
+     
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+Enter your name: <input type="text" id="f1name" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<input type="text" oncopy="myFunction()" value="Try to copy me">
+
+<p id="demo"></p>
+
+
+<div style="border:1px solid black;text-align:center">
+     <p>Right-click in this box!</p>
+     <p>Context menu will show.</p>
+     </div>
+     <br>
+     <div id="myDiv" style="border:1px solid black;text-align:center">
+     <p>Right-click in this box!</p>
+     <p>Context menu is disabled.</p>
+     </div>
+
+
+     <div class="form">
+          <h2 id="registraion">Register</h2>
+          <form>
+<label for="fname"> First Name</label>
+<input type="text" id="fname" placeholder="Your Name" value="john"/ 
+onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'">
+</form>
+
+     </div>
+
+     <p id="parent">
+          Lorem, ipsum dolor <strong id="child">sit</strong> amet consectetur adipisicing elit. Officia voluptatum impedit veniam at, aut laborum recusandae nam perferendis quis possimus?
+     </p>
+
+
+     
+<script>
+function myFunction() {
+  let x = document.getElementById("f1name");
+  x.value = x.value.toUpperCase();
+}
+
+
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "You copied text!"
+}
+
+const div = document.getElementById("myDiv");
+div.addEventListener("contextmenu", (e) => {e.preventDefault()});
+addEventListener()
+
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+parent.addEventListener("click", function(){
+     console.log("I am the PARENT")
+
+});
+parent.addEventListener("click", function(){
+     console.log("I am the CHILD")
+
+});
+
+
+
+</script>
+
+
+</body>
+</html>

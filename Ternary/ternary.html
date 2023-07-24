@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const value2 = () => {
+            let speed = document.getElementById("input2").value;
+            let message = speed >= 120 ? 'Too Fast' : speed >= 80 ? 'Fast' : 'OK';
+            document.getElementById("out2").innerHTML = message;
+        }
+        const value1 = () => {
+            if (document.getElementById("input1").value <1.4) {
+                document.getElementById("out1").innerHTML = "speed of floppy";
+            } else if (document.getElementById("input1").value < 29) {
+                document.getElementById("out1").innerHTML = "speed of dvd";
+            } else if (document.getElementById("input1").value < 150) {
+                document.getElementById("out1").innerHTML = "speed of hd";
+            }
+            else {
+                document.getElementById("out1").innerHTML = "speed of ssd";
+            }
+        }
+    </script>
+    <div class="row">
+        <div class="col-6">
+            <h1 >car speed</h1>
+            <h2>Enter the vehicle speed:<input type="text" id="input2"><br></h2>
+            <button type="button" onclick="value2 ()">CHECK</button><br>
+            <div  id="out2"></div>
+        </div>
+        <div class="col-6">
+            <h3 >speed of EXT-Drives</h3>
+            <h2>Enter the Value Speed<input type="text" id="input1"><br></h2>
+            <button type="button" onclick="value1 ()">VERIFY</button><br>
+            <div id="out1"></div>
+            <h3>
+                HDDs can copy 30 to 150 MB per second (MB/s), while standard SATA SSDs perform the same action at speeds of 500 MB/s</h3>
+        </div>
+    </div>
+</html>
