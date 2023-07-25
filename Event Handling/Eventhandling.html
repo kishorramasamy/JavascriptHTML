@@ -60,9 +60,7 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "You copied text!"
 }
 
-const div = document.getElementById("myDiv");
-div.addEventListener("contextmenu", (e) => {e.preventDefault()});
-addEventListener()
+
 
 const parent = document.getElementById("parent");
 const child = document.getElementById("child");
@@ -71,7 +69,7 @@ parent.addEventListener("click", function(){
      console.log("I am the PARENT")
 
 });
-parent.addEventListener("click", function(){
+child.addEventListener("click", function(){
      console.log("I am the CHILD")
 
 });
